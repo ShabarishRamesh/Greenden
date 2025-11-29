@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: "Vollkorn", serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100vw);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .animate-slide-in {
+            animation: slideInFromLeft 0.5s ease-out forwards;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-green-100 z-0">
+<!-- header -->
+    <div class="m-2 p-2 text-red-800 flex justify-between items-center">
+        <h1 class="text-3xl font-bold animate-slide-in md:text-4xl lg:text-5xl">Greenden</h1>
+        <!-- pages -->
+        <div class="text-red-800 flex gap-10 justify-between items-center">
+            <a href="product.html"><button class="btn p-2 rounded-2xl bg-red-800 text-white">Product</button></a>
+            <a href="index.html"><button class="btn p-2 rounded-2xl bg-red-800 text-white">Home</button></a>
+        </div>
+        <p class="hidden sm:block">“Your Green Space Starts Here.”</p>
+    </div>
+<!-- navibar -->
+    <nav class="m-0 p-3 gap-3 bg-white flex justify-evenly items-center z-10 sticky top-0 drop-shadow-2xl">
+        <i class="fa-solid fa-bars block sm:hidden sm:w-px" style="color: #901414;"></i>
+        <img src="./image/logo.jpg" alt="logo" class=" w-11 h-11 hidden sm:inline-block">
+        <div class="p-2 flex items-center flex-grow border-red-800 border border-red-800 rounded-2xl ">
+            <i class="fa-solid fa-magnifying-glass " style="color: #901414;"></i>
+            <input type="text" placeholder="Search for green" class="focus:outline-none bg-transparent ">
+        </div>
+        <ul class=" gap-4 text-red-800 hidden sm:flex ">
+            <li class="hover:text-black hover:underline">Plants</li>
+            <li class="hover:text-black hover:underline">Care Tools</li>
+            <li class="hover:text-black hover:underline">Gifts</li>
+            <li class="hover:text-black hover:underline">Learn</li>
+            <li class="hover:text-black hover:underline">Corporate Gifts</li>
+        </ul>
+        <i class="fa-solid fa-basket-shopping " style="color: #901414;"></i>
+    </nav>
+<!-- Contact Form Section -->
+    <div class="min-h-screen flex items-center justify-center px-4 py-10">
+        <div class="max-w-2xl w-full bg-white rounded-2xl shadow-xl p-8 md:p-12">
+            <!-- Header -->
+            <div class="text-center mb-8">
+                <h1 class="text-4xl font-bold text-gray-800 mb-3">Get in Touch</h1>
+                <p class="text-gray-600 text-lg">We'd love to hear from you! Fill out the form below and we'll get back to you as soon as possible.</p>
+            </div>
+
+            <!-- Contact Form -->
+            <form class="space-y-6">
+                <!-- Name -->
+                <div>
+                    <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Your Name *</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        required
+                        placeholder="John Doe"
+                        class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-teal-600 transition-colors"
+                    >
+                </div>
+
+                <!-- Email -->
+                <div>
+                    <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email Address *</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required
+                        placeholder="john@example.com"
+                        class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-teal-600 transition-colors"
+                    >
+                </div>
+
+                <!-- Phone -->
+                <div>
+                    <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone"
+                        placeholder="(555) 123-4567"
+                        class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-teal-600 transition-colors"
+                    >
+                </div>
+
+                <!-- Subject -->
+                <div>
+                    <label for="subject" class="block text-sm font-semibold text-gray-700 mb-2">Subject *</label>
+                    <select 
+                        id="subject" 
+                        name="subject" 
+                        required
+                        class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-teal-600 transition-colors bg-white"
+                    >
+                        <option value="">Select a subject...</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="order">Order Question</option>
+                        <option value="plant-care">Plant Care Help</option>
+                        <option value="shipping">Shipping & Delivery</option>
+                        <option value="returns">Returns & Exchanges</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <!-- Message -->
+                <div>
+                    <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">Message *</label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        required
+                        rows="5"
+                        placeholder="Tell us how we can help you..."
+                        class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-teal-600 transition-colors resize-none"
+                    ></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div>
+                    <button 
+                        type="submit"
+                        class="w-full bg-gradient-to-r from-teal-600 to-teal-700 text-white font-bold py-4 px-6 rounded-lg hover:from-teal-700 hover:to-teal-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                    >
+                        Send Message
+                    </button>
+                </div>
+
+                <!-- Additional Info -->
+                <p class="text-sm text-gray-500 text-center mt-4">
+                    * Required fields. We typically respond within 24 hours.
+                </p>
+            </form>
+
+            <!-- Contact Info -->
+            <div class="mt-12 pt-8 border-t border-gray-200">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <!-- Email -->
+                    <div>
+                        <div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-1">Email Us</h3>
+                        <p class="text-sm text-gray-600">support@greenden.com</p>
+                    </div>
+
+                    <!-- Phone -->
+                    <div>
+                        <div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-1">Call Us</h3>
+                        <p class="text-sm text-gray-600">1-800-GREENDEN</p>
+                    </div>
+
+                    <!-- Hours -->
+                    <div>
+                        <div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-800 mb-1">Business Hours</h3>
+                        <p class="text-sm text-gray-600">Mon-Fri: 9AM - 6PM EST</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- footer -->
+    <footer class="text-red-800 py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <!-- Stay in the Loop Section -->
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold mb-3">STAY IN THE LOOP</h2>
+                <p class="text-teal-100 text-lg">Stay in the loop with special offers, plant-parenting tips, and more.</p>
+            </div>
+
+            <!-- Footer Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
+                <!-- Column 1: Company -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-red-800 bg-transparent">COMPANY</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-black transition-colors">About</a></li>
+                        <li><a href="#" class="hover:text-black transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-black transition-colors">Reviews</a></li>
+                        <li><a href="#" class="hover:text-black transition-colors">Press</a></li>
+                        <li><a href="#" class="hover:text-black transition-colors">Our Guarantee</a></li>
+                        <li><a href="#" class="hover:text-black transition-colors">Corporate Gifting</a></li>
+                        <li><a href="#" class="hover:text-black transition-colors">Trade Program</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Support -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-red-800 bg-transparent">SUPPORT</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-black transition-colors">Help + FAQs</a></li>
+                        <li><a href="#" class="hover:text-black transition-colors">Track Your Order</a></li>
+                        <li><a href="#" class="hover:text-black transition-colors">Shipping</a></li>
+                        <li><a href="#" class="hover:text-black transition-colors">Returns</a></li>
+                        <li><a href="#" class="hover:text-black transition-colors">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Plant Questions -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-red-800 bg-transparent">PLANT QUESTIONS?</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-black transition-colors">Plant Care Tips</a></li>
+                        <li><a href="#" class="hover:text-black transition-colors">Plant Life Blog</a></li>
+                        <li><a href="#" class="hover:text-black transition-colors">Vera Plant Care App</a></li>
+                        <li><a href="#" class="hover:text-black transition-colors">Contact the Grow-How® Team</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Empty -->
+                <div></div>
+
+                <!-- Column 5: Empty -->
+                <div></div>
+            </div>
+
+            <!-- Bottom Links and Social -->
+            <div class="border-t border-teal-500 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <!-- Legal Links -->
+                    <div class="flex flex-wrap gap-6 mb-6 md:mb-0 text-sm">
+                        <a href="#" class="hover:text-black transition-colors">Terms</a>
+                        <a href="#" class="hover:text-black transition-colors">Privacy Policy</a>
+                        <a href="#" class="hover:text-black transition-colors">Do Not Sell My Information</a>
+                        <a href="#" class="hover:text-black transition-colors">Accessibility</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
